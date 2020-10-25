@@ -1,5 +1,3 @@
-# go-twitter [![Build Status](https://github.com/vanclief/go-twitter/workflows/test/badge.svg)](https://github.com/vanclief/go-twitter/actions?query=workflow%3Atest+branch%3Amaster) [![GoDoc](https://godoc.org/github.com/vanclief/go-twitter?status.svg)](https://godoc.org/github.com/vanclief/go-twitter)
-
 <img align="right" src="https://storage.googleapis.com/dghubble/gopher-on-bird.png">
 
 go-twitter is a Go client library for the [Twitter API](https://dev.twitter.com/rest/public). Check the [usage](#usage) section or try the [examples](/examples) to see how to access the Twitter API.
