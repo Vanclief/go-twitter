@@ -1,4 +1,4 @@
-# go-twitter [![Build Status](https://github.com/dghubble/go-twitter/workflows/test/badge.svg)](https://github.com/dghubble/go-twitter/actions?query=workflow%3Atest+branch%3Amaster) [![GoDoc](https://godoc.org/github.com/dghubble/go-twitter?status.svg)](https://godoc.org/github.com/dghubble/go-twitter)
+# go-twitter [![Build Status](https://github.com/vanclief/go-twitter/workflows/test/badge.svg)](https://github.com/vanclief/go-twitter/actions?query=workflow%3Atest+branch%3Amaster) [![GoDoc](https://godoc.org/github.com/vanclief/go-twitter?status.svg)](https://godoc.org/github.com/vanclief/go-twitter)
 
 <img align="right" src="https://storage.googleapis.com/dghubble/gopher-on-bird.png">
 
@@ -6,33 +6,33 @@ go-twitter is a Go client library for the [Twitter API](https://dev.twitter.com/
 
 ### Features
 
-* Twitter REST API:
-    * Accounts
-    * DirectMessageEvents
-    * Favorites
-    * Friends
-    * Friendships
-    * Followers
-    * Lists
-    * PremiumSearch
-    * RateLimits
-    * Search
-    * Statuses
-    * Timelines
-    * Users
-* Twitter Streaming API
-    * Public Streams
-    * User Streams
-    * Site Streams
-    * Firehose Streams
+- Twitter REST API:
+  - Accounts
+  - DirectMessageEvents
+  - Favorites
+  - Friends
+  - Friendships
+  - Followers
+  - Lists
+  - PremiumSearch
+  - RateLimits
+  - Search
+  - Statuses
+  - Timelines
+  - Users
+- Twitter Streaming API
+  - Public Streams
+  - User Streams
+  - Site Streams
+  - Firehose Streams
 
 ## Install
 
-    go get github.com/dghubble/go-twitter/twitter
+    go get github.com/vanclief/go-twitter/twitter
 
 ## Documentation
 
-Read [GoDoc](https://godoc.org/github.com/dghubble/go-twitter/twitter)
+Read [GoDoc](https://godoc.org/github.com/vanclief/go-twitter/twitter)
 
 ## Usage
 
@@ -111,7 +111,7 @@ params := &twitter.StreamUserParams{
 stream, err := client.Streams.User(params)
 ```
 
-*Note* To see Direct Message events, your consumer application must ask Users for read/write/DM access to their account.
+_Note_ To see Direct Message events, your consumer application must ask Users for read/write/DM access to their account.
 
 #### Sample
 
@@ -172,7 +172,7 @@ demux.HandleChan(stream.Messages)
 
 ### Stopping
 
-The `Stream` will stop itself if the stream disconnects and retrying produces unrecoverable errors. When this occurs, `Stream` will close the `stream.Messages` channel, so execution will break out of any message *for range* loops.
+The `Stream` will stop itself if the stream disconnects and retrying produces unrecoverable errors. When this occurs, `Stream` will close the `stream.Messages` channel, so execution will break out of any message _for range_ loops.
 
 When you are finished receiving from a `Stream`, call `Stop()` which closes the connection, channels, and stops the goroutine **before** returning. This ensures resources are properly cleaned up.
 
@@ -225,7 +225,7 @@ For example, make requests as a consumer application on behalf of a user who has
 ```go
 // OAuth1
 import (
-    "github.com/dghubble/go-twitter/twitter"
+    "github.com/vanclief/go-twitter/twitter"
     "github.com/dghubble/oauth1"
 )
 
@@ -243,7 +243,7 @@ If no user auth context is needed, make requests as your application with applic
 ```go
 // OAuth2
 import (
-    "github.com/dghubble/go-twitter/twitter"
+    "github.com/vanclief/go-twitter/twitter"
     "golang.org/x/oauth2"
     "golang.org/x/oauth2/clientcredentials"
 )
@@ -265,8 +265,8 @@ To implement Login with Twitter for web or mobile, see the gologin [package](htt
 
 ## Roadmap
 
-* Support gzipped streams
-* Auto-stop streams in the event of long stalls
+- Support gzipped streams
+- Auto-stop streams in the event of long stalls
 
 ## Contributing
 
